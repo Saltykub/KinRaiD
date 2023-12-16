@@ -18,9 +18,10 @@ const Question = (props) => {
         setPick(pick.concat(newPick));
         setCount(newCount);
     }
+    //test commit
     return (
         <div>
-         
+            
             <h1>{questions[count].name}</h1>
             <button onClick={handleYes}>Yes</button>
             <button onClick={handleNo}>No</button>
