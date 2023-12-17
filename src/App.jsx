@@ -1,14 +1,16 @@
 import { useState ,useEffect} from "react";
 import Question from './component/Question.jsx'
 const App = () => {
-      const [count,setCount] = useState(0);
-      const [pick,setPick] = useState([]);
-      const [once,setOnce] = useState(true);
-      const [questions,setQuestions] = useState([{
+      const [count, setCount] = useState(0);
+      const [pick, setPick] = useState([]);
+      const [once, setOnce] = useState(true);
+      const [questions, setQuestions] = useState([{
           name: 'temp1', id: 1
-        },{
+        },
+        {
           name: 'temp2', id: 2
-        },{
+        },
+        {
           name: 'temp3', id: 3
         }
       ])
@@ -23,14 +25,14 @@ const App = () => {
       //   console.log('pass');
       // },[])
       console.log('after shuffle',questions);
-      if(count<questions.length){
-      return (
-        <div>
-          <h1>Choose your favorite choice</h1>
-          <Question questions={questions} pick={pick} setCount={setCount} setPick={setPick} count={count}/>
-          {console.log(pick)}
-        </div>
-      )
+      if(count < questions.length){
+        return (
+          <div>
+            <h1>Choose your favorite choice</h1>
+            <Question questions={questions} pick={pick} setCount={setCount} setPick={setPick} count={count}/>
+            {console.log(pick)}
+          </div>
+        )
       }
       // if no more question
       return (
