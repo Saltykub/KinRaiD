@@ -20,11 +20,6 @@ const App = () => {
         setQuestions(shuffle);
         setOnce(false);console.log('shuffle',questions);
       }
-      // useEffect(() => {
-      //   questions.sort(() => Math.random() - 0.5);
-      //   console.log('pass');
-      // },[])
-      console.log('after shuffle',questions);
       if(count < questions.length){
         return (
           <div>
