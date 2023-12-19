@@ -1,4 +1,5 @@
 import { useState ,useEffect} from "react";
+import service from './service.js'
 import Question from './component/Question.jsx'
 const App = () => {
       const [count, setCount] = useState(0);
