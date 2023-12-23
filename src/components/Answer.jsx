@@ -7,7 +7,7 @@ const Answer = ({ pick, setCount, setOnce, setPick }) => {
         chatgpt(pick).then(response => setAnswer(response))
     }, [])
     console.log("answer", answer)
-    const output = answer.split('\n').map(ans => <p>{ans}</p>)
+    const output = answer.split('\n').map(ans => <p key={ans}>{ans}</p>)
 
     const handleBack = e => {
         setCount(0)

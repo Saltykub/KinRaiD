@@ -20,7 +20,8 @@ const App = () => {
       if(once){
         const shuffle = questions.sort(() => Math.random() - 0.5);
         setQuestions(shuffle);
-        setOnce(false);console.log('shuffle',questions);
+        setOnce(false);
+        console.log('shuffle',questions);
       }
       if(count < questions.length){
         return (
