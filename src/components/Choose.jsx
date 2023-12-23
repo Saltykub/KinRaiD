@@ -18,7 +18,8 @@ const Choose = ({setRan,setStart}) => {
         return (
           <div>
             <h1>Choose your favorite choice</h1>
-            <Question questions={questions} pick={pick} setCount={setCount} setPick={setPick} count={count}/>
+            <Question questions={questions} pick={pick} setCount={setCount} 
+            setPick={setPick} count={count} setRan={setRan} setStart={setStart} setOnce={setOnce}/>
             {console.log(pick)}
           </div>
         )
@@ -26,7 +27,8 @@ const Choose = ({setRan,setStart}) => {
       // if no more question
       return (
         <div>
-          <Answer pick={pick} setCount={setCount} setOnce={setOnce} setPick={setPick} setRan={setRan} setStart={setStart}/>
+          <Answer pick={pick} setCount={setCount} setOnce={setOnce} 
+          setPick={setPick} setRan={setRan} setStart={setStart}/>
           {console.log(pick)}
         </div>
       )

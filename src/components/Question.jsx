@@ -1,5 +1,6 @@
+import Stop from "./Stop";
 const Question = (props) => {
-    const { questions, pick, setPick, count, setCount } = props;
+    const { questions, pick, setPick, count, setCount} = props;
     const handleYes = () => {
         const newPick = {pick:'yes', id:questions[count].id, name:questions[count].name};
         const newCount = count+1;
@@ -25,6 +26,7 @@ const Question = (props) => {
             <button onClick={handleYes}>Yes</button>
             <button onClick={handleNo}>No</button>
             <button onClick={handleMaybe}>Maybe</button>
+            <Stop questions={questions} pick={pick} setPick={setPick} count={count} setCount={setCount}/>
         </div>
     )
 }

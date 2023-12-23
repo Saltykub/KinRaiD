@@ -10,7 +10,8 @@ const Random = ({setRan,setStart}) => {
     return (
         <div>
             {console.log(pick)}
-            <Answer pick={pick} setCount={setCount} setOnce={setOnce} setPick={setPick} setRan={setRan} setStart={setStart}/>
+            <Answer pick={pick} setCount={setCount} setOnce={setOnce} 
+            setPick={setPick} setRan={setRan} setStart={setStart}/>
         </div>
     )
 }
