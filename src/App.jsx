@@ -1,45 +1,26 @@
-import { useState ,useEffect} from "react";
-import Question from './components/Question.jsx'
-import Answer from "./components/Answer.jsx";
-
+import { useState } from "react"
+import Choose from "./components/Choose"
+import Random from "./components/Random";
 const App = () => {
-      const [count, setCount] = useState(0);
-      const [pick, setPick] = useState([]);
-      const [once, setOnce] = useState(true);
-      const [questions, setQuestions] = useState([{
-          name: 'sweet', id: 1
-        },
-        {
-          name: 'chocolate', id: 2
-        },
-        {
-          name: 'matcha', id: 3
-        }
-      ])
-      //shuffle question everytime
-      if(once){
-        const shuffle = questions.sort(() => Math.random() - 0.5);
-        setQuestions(shuffle);
-        setOnce(false);
-        console.log('shuffle',questions);
-      }
-      if(count < questions.length){
-        return (
-          <div>
-            <h1>Choose your favorite choice</h1>
-            <Question questions={questions} pick={pick} setCount={setCount} setPick={setPick} count={count}/>
-            {console.log(pick)}
-          </div>
-        )
-      }
-      // if no more question
-      return (
+    const [start,setStart] = useState(false);
+    const [ran,setRan] = useState(false);
+    const handleStart = e => {
+        console.log('start')
+        setStart(true);
+    }
+    const handleRandom = e => {
+        console.log('ran');
+        setRan(true);
+    }
+    if(start)return <Choose setRan={setRan} setStart={setStart}/>
+    if(ran)return <Random setRan={setRan} setStart={setStart}/>
+    return (
         <div>
-          <Answer pick={pick} setCount={setCount} setOnce={setOnce} setPick={setPick}/>
-          {console.log(pick)}
+            <h1>Welcome to KinRaiD</h1>
+            <p>pick one</p>
+            <button onClick={handleStart}>start</button>
+            <button onClick={handleRandom}>random</button>
         </div>
-      )
-
+    )
 }
-
-export default App;
+export default App
