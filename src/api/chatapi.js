@@ -15,9 +15,9 @@ async function chatgpt(data) {
         Your job is to provide a list of five food corresponding to the given characteristics. \
         If the characteristic is categorized as 'yes', your food must have that trait. \
         If the characteristic is categorized as 'no', your food must not have that trait. \
-        Do note that it is not necessary to stick with the given characteristics, you can also choose some unpopular food.\
-        Your answer should not be too broad. \
         Provide your answer in bullet point (not numbering) form. \
+        Do note that it is not necessary to include the given characteristics into your answer if you think it can be implied. \
+        Your answer should not be too broad. \
         Do not include any further explanation for each food: only name of food is acceptable."},
         {role: "user", content: query}
     ],
