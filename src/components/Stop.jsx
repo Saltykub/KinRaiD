@@ -1,4 +1,3 @@
-import Answer from "./Answer";
 import { useState } from "react";
 const Stop = ({questions,pick,setPick,count,setCount}) => {
     const choice = ['yes','no','maybe']
