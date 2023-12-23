@@ -4,7 +4,7 @@ import { useState ,useEffect} from "react";
 const Answer = ({ pick, setCount, setOnce, setPick }) => {
     const [answer, setAnswer] = useState('')
     useEffect(() => {
-        chatgpt(pick).then(response => setAnswer(response))
+        chatgpt(pick).then(res => setAnswer(res))
     }, [])
     console.log("answer", answer)
     const output = answer.split('\n').map(ans => <p key={ans}>{ans}</p>)
