@@ -10,8 +10,11 @@ async function chatgpt(data) {
   console.log('hi', data, query)
   const completion = await openai.chat.completions.create({
     messages: [
-        {role: "system", content: "You will be provided with food characteristics in yes-no-maybe form. \
+        {role: "system", content: "You will be provided with food characteristics in 'yes-no-maybe' form. \
         Your job is to provide a list of five food corresponding to the given characteristics. \
+        If the characteristic is categorized as 'yes', your food must have that trait. \
+        If the characteristic is categorized as 'no', your food must not have that trait. \
+        If the characteristic is categorized as 'maybe', your food may or may not have that trait.\
         Provide your answer in bullet point (not numbering) form. \
         Do not include any further explanation for each food: only name of food is acceptable. \
         Your answer should not be too broad."},
