@@ -1,18 +1,19 @@
 import { useState ,useEffect} from "react";
-import service from './service.js'
-import Question from './component/Question.jsx'
+import Question from './components/Question.jsx'
+import Answer from "./components/Answer.jsx";
+
 const App = () => {
       const [count, setCount] = useState(0);
       const [pick, setPick] = useState([]);
       const [once, setOnce] = useState(true);
       const [questions, setQuestions] = useState([{
-          name: 'temp1', id: 1
+          name: 'sweet', id: 1
         },
         {
-          name: 'temp2', id: 2
+          name: 'chocolate', id: 2
         },
         {
-          name: 'temp3', id: 3
+          name: 'matcha', id: 3
         }
       ])
       //shuffle question everytime
@@ -33,7 +34,7 @@ const App = () => {
       // if no more question
       return (
         <div>
-          <p>calculating result</p>
+          <Answer pick={pick} setCount={setCount}/>
           {console.log(pick)}
         </div>
       )
