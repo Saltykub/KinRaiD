@@ -12,7 +12,9 @@ async function chatgpt(data) {
     messages: [
         {role: "system", content: "You will be provided with food characteristics in yes-no-maybe form. \
         Your job is to provide a list of five food corresponding to the given characteristics. \
-        Provide your answer in bullet point (not numbering) form."},
+        Provide your answer in bullet point (not numbering) form. \
+        Do not include any further explanation for each food: only name of food is acceptable. \
+        Your answer should not be too broad."},
         {role: "user", content: query}
     ],
     model: "gpt-3.5-turbo",
