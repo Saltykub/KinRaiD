@@ -1,7 +1,7 @@
 import chatgpt from '../api/chatapi.js'
 import { useState ,useEffect} from "react";
 
-const Answer = ({ pick, setCount, setOnce }) => {
+const Answer = ({ pick, setCount, setOnce, setPick }) => {
     const [answer, setAnswer] = useState('')
     useEffect(() => {
         chatgpt(pick).then(response => setAnswer(response))
@@ -12,6 +12,7 @@ const Answer = ({ pick, setCount, setOnce }) => {
     const handleBack = e => {
         setCount(0)
         setOnce(true)
+        setPick([])
     }
 
     return (
