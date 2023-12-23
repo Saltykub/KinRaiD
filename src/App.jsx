@@ -34,7 +34,7 @@ const App = () => {
       // if no more question
       return (
         <div>
-          <Answer pick={pick} setCount={setCount}/>
+          <Answer pick={pick} setCount={setCount} setOnce={setOnce}/>
           {console.log(pick)}
         </div>
       )
