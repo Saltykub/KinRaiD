@@ -20,7 +20,7 @@ const App = () => {
     if(ran)
       return <Random setRan={setRan} setStart={setStart}/>
     return (
-        <div className="flex flex-col text-center mt-24 sm:mt-32">
+        <div className="flex flex-col text-center mt-20 sm:mt-48">
           <h1 className="text-7xl px-5 mb-8 bg-slate-500 py-5">Welcome to Kin Rai D</h1>
           <p className="text-3xl font-sans mb-6"> 
                 /\_/\     <br/>

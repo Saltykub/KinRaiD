@@ -18,8 +18,8 @@ const Choose = ({setRan, setStart, type}) => {
       }
       if(count < questions.length){
         return (
-          <div className="flex flex-col text-center my-52">
-            <p className="shadow-inner text-5xl px-5 mb-8 bg-slate-500 ">Do you want your food to be <a className="underline decoration-indigo-400">{questions[count].name}</a>?</p>
+          <div className="flex flex-col text-center mt-48 sm:mt-64">
+            <p className="shadow-inner text-5xl px-5 mb-12 bg-slate-500 py-5">Do you want your food to be <a className="underline decoration-indigo-400">{questions[count].name}</a>?</p>
             <Question questions={questions} pick={pick} setCount={setCount} 
             setPick={setPick} count={count} setRan={setRan} setStart={setStart} setOnce={setOnce}/>
             {console.log(pick)}
