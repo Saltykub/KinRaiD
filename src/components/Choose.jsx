@@ -2,11 +2,13 @@ import { useState ,useEffect} from "react";
 import Question from './Question.jsx'
 import Answer from "./Answer.jsx";
 import datas from '../assets/data.js'
-const Choose = ({setRan,setStart}) => {
+
+const Choose = ({setRan, setStart, type}) => {
       const [count, setCount] = useState(0);
-      const [pick, setPick] = useState([]);
+      const [pick, setPick] = useState([{name: type, pick: 'yes'}]);
       const [once, setOnce] = useState(true);
-      const [questions, setQuestions] = useState(datas);
+      const [questions, setQuestions] = useState(datas[type]);
+      
       //shuffle question everytime
       if(once){
         const shuffle = questions.sort(() => Math.random() - 0.5);
@@ -16,8 +18,8 @@ const Choose = ({setRan,setStart}) => {
       }
       if(count < questions.length){
         return (
-          <div>
-            <h1>Choose your favorite choice</h1>
+          <div className="flex flex-col text-center my-52">
+            <p className="shadow-inner text-5xl px-5 mb-8 bg-slate-500 ">Do you want your food to be <a className="underline decoration-indigo-400">{questions[count].name}</a>?</p>
             <Question questions={questions} pick={pick} setCount={setCount} 
             setPick={setPick} count={count} setRan={setRan} setStart={setStart} setOnce={setOnce}/>
             {console.log(pick)}
