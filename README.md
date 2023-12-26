@@ -10,4 +10,4 @@ What you need to do is to specify what type of food you want! We will give five 
 - Vite + React
 - Chat Completion API from OpenAI
 - TailwindCSS
-- Anime.js
+- Framer-motion 
