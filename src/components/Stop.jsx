@@ -13,7 +13,7 @@ const Stop = ({questions, pick, setPick, count, setCount}) => {
             name: questions[i].name,
             id: questions[i].id,}
             newPick.push(obj);
-            console.log('newPick', newPick);
+            // console.log('newPick', newPick);
         }   
         setPick(newPick)   
         setCount(questions.length);
