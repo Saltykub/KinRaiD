@@ -6,12 +6,8 @@ const Random = ({setRan, setStart}) => {
     const ranInt = (Math.floor(Math.random()*2))
     const [count, setCount] = useState(0);
     const [pick, setPick] = useState([
-        {
-            name: 'desert', pick: ranInt
-        },
-        {
-            name: 'meal', pick: 1-ranInt
-        }
+        { name: 'desert', pick: ranInt },
+        { name: 'meal', pick: 1-ranInt }
     ]);
     const [once, setOnce] = useState(true);
 

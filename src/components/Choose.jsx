@@ -6,22 +6,12 @@ import datas from '../assets/data.js'
 const Choose = ({setRan, setStart, type}) => {
       const [count, setCount] = useState(0);
       const [pick, setPick] = useState([{name: type, pick: 'yes'}]);
-      // const [once, setOnce] = useState(true);
       const [questions, setQuestions] = useState(null);
       
       //shuffle question everytime
-      // if(once){
-      //   const shuffle = questions.sort(() => Math.random() - 0.5);
-      //   setQuestions(shuffle);
-      //   setOnce(false);
-      //   console.log('shuffle',questions);
-      // }
-
       useEffect(() => {
         const shuffle = datas[type].sort(() => Math.random() - 0.5);
         setQuestions(shuffle);
-        // setOnce(false);
-        // console.log('shuffle', questions);
       }, [])
 
       if(questions === null) return null
