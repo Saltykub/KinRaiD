@@ -1,8 +1,7 @@
 import { motion } from "framer-motion"
-const Back = ({ setCount, setOnce, setPick, setRan, setStart }) => {
+const Back = ({ setCount, setPick, setRan, setStart }) => {
     const handleBack = e => {
         setCount(0)
-        setOnce(true)
         setPick([])
         setStart(false);
         setRan(false);

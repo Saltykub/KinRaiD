@@ -1,20 +1,44 @@
 const datas = {
   dish: [
-    {
-      name: 'Thai'
-    },
+    { name: 'Thai' },
+    { name: 'Italian' },
+    { name: 'Chinese' },
+    { name: 'Indian' },
+    { name: 'Japanese' },
+    { name: 'Korean' }, 
+    { name: 'Vegetable' },
+    { name: 'Meat' },
+    { name: 'Spicy' },
+    { name: 'Sweet' },
+    { name: 'Grilled' },
+    { name: 'Roasted' },
+    { name: 'Fried' },
+    { name: 'Steamed' },
+    { name: 'Baked' },
+    { name: 'Cheese' },
+    { name: 'Seafood' },
+    { name: 'Pork' },
+    { name: 'Beef' },
+    { name: 'Chicken' },
+    { name: 'Pasta' },
   ],
 
   desert: [
-    {
-      name: 'Sweet', id: 1
-    },
-    {
-      name: 'Chocolate', id: 2
-    },
-    {
-      name: 'Matcha', id: 3
-    },
+    { name: 'Chocolate' },
+    { name: 'Matcha' },
+    { name: 'Sour' },
+    { name: 'Fruity' },
+    { name: 'Baked' },
+    { name: 'Chilled' },
+    { name: 'Fried' },
+    { name: 'Cake' },
+    { name: 'Ice Cream' },
+    { name: 'Nuts' },
+    { name: 'Berries' },
+    { name: 'Whipped Cream' },
+    { name: 'Honey' },
+    { name: 'Caramel' },
+    { name: 'Cheese' },
   ]
 }
 

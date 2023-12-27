@@ -2,7 +2,7 @@ import chatgpt from '../api/chatapi.js'
 import { useState, useEffect } from "react";
 import Back from './Back'
 
-const Answer = ({ pick, setCount, setOnce, setPick, setRan, setStart }) => {
+const Answer = ({ pick, setCount, setPick, setRan, setStart }) => {
     const [answer, setAnswer] = useState('')
     useEffect(() => {
         chatgpt(pick).then(res => setAnswer(res))
@@ -17,7 +17,7 @@ const Answer = ({ pick, setCount, setOnce, setPick, setRan, setStart }) => {
             {output}
             </div>
             <div className="flex flex-col items-center mt-3">
-            <Back setCount={setCount} setOnce={setOnce} setPick={setPick} setRan={setRan} setStart={setStart}/>
+            <Back setCount={setCount} setPick={setPick} setRan={setRan} setStart={setStart}/>
             </div> 
        </div>
     )

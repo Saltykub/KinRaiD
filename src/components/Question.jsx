@@ -3,7 +3,7 @@ import Back from './Back.jsx';
 import {motion} from "framer-motion"
 
 const Question = (props) => {
-    const { questions, pick, setPick, count, setCount, setOnce, setRan, setStart } = props;
+    const { questions, pick, setPick, count, setCount, setRan, setStart } = props;
     const handleYes = () => {
         const newPick = {pick:'yes', id:questions[count].id, name:questions[count].name};
         const newCount = count+1;
@@ -37,7 +37,7 @@ const Question = (props) => {
             className="shadow-xl hover:shadow-yellow-500/50 text-3xl py-1 mb-5 w-1/3 sm:w-1/5 bg-yellow-500 rounded-3xl hover:bg-yellow-400 ">Maybe</motion.button>
             <Stop questions={questions} pick={pick} setPick={setPick} count={count} setCount={setCount}/>
         </div>
-        <Back setCount={setCount} setOnce={setOnce} setPick={setPick} setRan={setRan} setStart={setStart}/>
+        <Back setCount={setCount} setPick={setPick} setRan={setRan} setStart={setStart}/>
         </div>
     )
 }
