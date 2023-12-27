@@ -8,7 +8,7 @@ const Answer = ({ pick, setCount, setPick, setRan, setStart }) => {
         chatgpt(pick).then(res => setAnswer(res))
     }, [])
     console.log("answer", answer)
-    const output = answer.split('-').filter(ans => ans.length > 0).map(ans => <p key={ans} className='text-3xl py-1 mb-5 w-3/4 underline decoration-teal-400'>{ans}<br/></p>)
+    const output = answer.split('#').filter(ans => ans.length > 0).map(ans => <p key={ans} className='text-3xl py-1 mb-5 w-3/4 underline decoration-teal-400'>{ans}<br/></p>)
 
     return (
         <div className="flex flex-col text-center mt-20 sm:mt-36">
